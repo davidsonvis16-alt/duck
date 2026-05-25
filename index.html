@@ -331,121 +331,6 @@
             border-color: var(--text-light);
         }
 
-        /* --- BOOKING FORM SECTION --- */
-        .booking-section {
-            padding: 100px 20px;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .booking-container {
-            background: linear-gradient(145deg, #1a1f2e, #0f121a);
-            border: 1px solid rgba(230, 57, 70, 0.2);
-            border-radius: 30px;
-            padding: 50px;
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-        }
-
-        .booking-title {
-            font-size: 1.8rem;
-            color: var(--text-light);
-            margin-bottom: 10px;
-            font-weight: 700;
-        }
-
-        .booking-description {
-            color: var(--text-muted);
-            margin-bottom: 20px;
-            font-size: 1rem;
-        }
-
-        .booking-form {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-
-        .form-group {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-
-        .form-group label {
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .form-group input, .form-group select {
-            background: #141923;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 14px;
-            border-radius: 12px;
-            color: #fff;
-            font-family: inherit;
-            font-size: 1rem;
-            transition: var(--transition);
-        }
-
-        .form-group input:focus, .form-group select:focus {
-            outline: none;
-            border-color: var(--crimson);
-            box-shadow: 0 0 10px rgba(230, 57, 70, 0.2);
-        }
-
-        .live-counter-box {
-            grid-column: 1 / -1;
-            background: rgba(230, 57, 70, 0.05);
-            border: 1px dashed rgba(230, 57, 70, 0.3);
-            border-radius: 16px;
-            padding: 25px;
-            text-align: center;
-            margin-top: 15px;
-        }
-
-        .live-counter-box h4 {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-            margin-bottom: 5px;
-        }
-
-        .live-counter-text {
-            color: var(--text-muted);
-            margin-top: 10px;
-            font-size: 0.9rem;
-        }
-
-        .live-total {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: var(--gold);
-        }
-
-        .submit-booking-btn {
-            grid-column: 1 / -1;
-            background: linear-gradient(135deg, var(--crimson), #b31924);
-            color: white;
-            border: none;
-            padding: 16px;
-            font-size: 1.1rem;
-            font-weight: 700;
-            border-radius: 14px;
-            cursor: pointer;
-            transition: var(--transition);
-            box-shadow: 0 5px 20px rgba(230, 57, 70, 0.3);
-        }
-
-        .submit-booking-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(230, 57, 70, 0.5);
-        }
-
         /* --- INSTAGRAM / GALLERY CALLOUT --- */
         .cta-banner {
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), 
@@ -506,9 +391,6 @@
             .hero h1 {
                 font-size: 2.8rem;
             }
-            .booking-container {
-                padding: 25px;
-            }
         }
 
         @keyframes fadeIn {
@@ -524,7 +406,7 @@
         <ul class="nav-links">
             <li><a href="#hero" class="active">Home</a></li>
             <li><a href="#menu">Signature Combos</a></li>
-            <li><a href="#book-feast">Book Feast</a></li>
+            <li><a href="#about">Our Story</a></li>
         </ul>
         <a href="https://wa.me/254740401110" target="_blank" class="cta-btn">Order Platter</a>
     </header>
@@ -550,7 +432,7 @@
                 <div>
                     <h3>The Signature Mega Platter</h3>
                     <ul>
-                        <li><i class="fas fa-check"></i> Half Peking Duck</li>
+                        <li><i class="fa-solid : f00c"><i class="fas fa-check"></i></i> Half Peking Duck</li>
                         <li><i class="fas fa-check"></i> Steamed Chicken</li>
                         <li><i class="fas fa-check"></i> Ginger Scallion Crab</li>
                         <li><i class="fas fa-check"></i> Mapo Tofu Veg &amp; Egg Fried Rice</li>
@@ -559,7 +441,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="price">KES 10,500</div>
-                    <button class="order-sub-btn" onclick="selectPackage('mega-platter', 10500)">Select</button>
+                    <button class="order-sub-btn">Select</button>
                 </div>
             </div>
 
@@ -576,7 +458,7 @@
                 </div>
                 <div class="card-footer">
                     <div class="price">KES 5,000</div>
-                    <button class="order-sub-btn" onclick="selectPackage('duck-bundle', 5000)">Select</button>
+                    <button class="order-sub-btn">Select</button>
                 </div>
             </div>
 
@@ -593,59 +475,9 @@
                 </div>
                 <div class="card-footer">
                     <div class="price">KES 12,800</div>
-                    <button class="order-sub-btn" onclick="selectPackage('luxury-menu', 12800)">Select</button>
+                    <button class="order-sub-btn">Select</button>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section class="booking-section" id="book-feast">
-        <div class="section-header">
-            <h2>Book Your Private Feast</h2>
-            <p>Customize your catering experience with our interactive pricing calculator.</p>
-        </div>
-
-        <div class="booking-container">
-            <h3 class="booking-title">Event Catering Configurator</h3>
-            <p class="booking-description">Select your preferences to calculate the perfect package for your celebration.</p>
-
-            <form class="booking-form" onchange="calculateTotal()">
-                <div class="form-group">
-                    <label for="guest-count">Number of Guests</label>
-                    <input type="number" id="guest-count" name="guests" min="10" max="500" value="20" required>
-                </div>
-
-                <div class="form-group">
-                    <label for="menu-selection">Select Menu Package</label>
-                    <select id="menu-selection" name="menu" required>
-                        <option value="5000">Peking Duck Bundle - KES 5,000</option>
-                        <option value="10500">Mega Platter - KES 10,500</option>
-                        <option value="12800">Luxury Menu - KES 12,800</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="service-type">Service Type</label>
-                    <select id="service-type" name="service" required>
-                        <option value="1">Standard Delivery - Free</option>
-                        <option value="1.1">Premium Setup - 10% Extra</option>
-                        <option value="1.2">Full Service - 20% Extra</option>
-                    </select>
-                </div>
-
-                <div class="form-group">
-                    <label for="event-date">Event Date</label>
-                    <input type="date" id="event-date" name="date" required>
-                </div>
-
-                <div class="live-counter-box">
-                    <h4>Total Estimated Cost</h4>
-                    <div class="live-total" id="total-price">KES 0</div>
-                    <p class="live-counter-text">Price updates as you customize your order</p>
-                </div>
-
-                <button type="submit" class="submit-booking-btn" onclick="submitBooking(event)">Proceed to WhatsApp Booking</button>
-            </form>
         </div>
     </section>
 
@@ -673,49 +505,624 @@
                 navbar.classList.remove('scrolled');
             }
         });
-
-        function calculateTotal() {
-            const guests = parseInt(document.getElementById('guest-count').value) || 0;
-            const basePrice = parseFloat(document.getElementById('menu-selection').value) || 0;
-            const serviceMultiplier = parseFloat(document.getElementById('service-type').value) || 1;
-
-            const costPerPerson = basePrice;
-            const totalBeforeService = guests * costPerPerson;
-            const totalWithService = Math.round(totalBeforeService * serviceMultiplier);
-
-            document.getElementById('total-price').textContent = 'KES ' + totalWithService.toLocaleString();
+    </script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Duck House | Authentic Chinese Cloud Kitchen Nairobi</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* --- DESIGN SYSTEM & RESET --- */
+        :root {
+            --bg-dark: #07080a;
+            --bg-card: #12161f;
+            --gold: #dfb76c;
+            --crimson: #e63946;
+            --text-light: #f4f4f9;
+            --text-muted: #a0aab5;
+            --nav-glow: rgba(230, 57, 70, 0.25);
+            --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
         }
 
-        function selectPackage(packageName, price) {
-            document.getElementById('menu-selection').value = price;
-            document.getElementById('guest-count').value = 20;
-            calculateTotal();
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, .brand-font {
+            font-family: 'Playfair Display', serif;
+        }
+
+        /* --- PREMIUM NAVIGATION BAR WITH TRANSITIONS --- */
+        header {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 90%;
+            max-width: 1200px;
+            z-index: 1000;
+            background: rgba(7, 8, 10, 0.75);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 50px;
+            padding: 15px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: var(--transition);
+        }
+
+        header.scrolled {
+            top: 0;
+            width: 100%;
+            max-width: 100%;
+            border-radius: 0;
+            background: rgba(7, 8, 10, 0.95);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+            border-bottom: 1px solid var(--crimson);
+            padding: 12px 60px;
+        }
+
+        .logo {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+            color: var(--text-light);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--crimson);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            padding: 5px 0;
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--text-light);
+            text-shadow: 0 0 10px var(--nav-glow);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--crimson);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after, .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .cta-btn {
+            background: linear-gradient(135deg, var(--crimson), #b31924);
+            color: #fff;
+            padding: 10px 24px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+            transition: var(--transition);
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(230, 57, 70, 0.6);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(7,8,10,1)), 
+                        url('https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            padding: 0 20px;
+            padding-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 800;
+        }
+
+        .hero h1 span {
+            color: var(--crimson);
+            font-style: italic;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+        }
+
+        /* --- OFFERS & FEATURED GRID --- */
+        .section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: linear-gradient(145deg, #11141c, #090b10);
+            border: 1px solid rgba(255, 255, 255, 0.04);
+            border-radius: 24px;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(230, 57, 70, 0.4);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .card-body {
+            padding: 25px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--gold);
+            color: #000;
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 4px 12px;
+            border-radius: 12px;
+            text-transform: uppercase;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+
+        .card ul {
+            list-style: none;
+            margin-bottom: 25px;
+            color: var(--text-muted);
+        }
+
+        .card ul li {
+            margin-bottom: 8px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .card ul li i {
+            color: var(--crimson);
+            font-size: 0.8rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 20px;
+        }
+
+        .price {
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--crimson);
+        }
+
+        .book-now-btn {
+            background: transparent;
+            border: 1px solid var(--crimson);
+            color: var(--crimson);
+            padding: 8px 20px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+
+        .card:hover .book-now-btn {
+            background: var(--crimson);
+            color: #fff;
+        }
+
+        /* --- INTERACTIVE PRICING CALCULATOR & BOOKING --- */
+        .booking-container {
+            background: linear-gradient(145deg, #0e121a, #07090d);
+            border: 1px solid rgba(230, 57, 70, 0.2);
+            border-radius: 30px;
+            padding: 50px;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+
+        .booking-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group label {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .form-group input, .form-group select {
+            background: #141923;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 14px;
+            border-radius: 12px;
+            color: #fff;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--crimson);
+            box-shadow: 0 0 10px rgba(230, 57, 70, 0.2);
+        }
+
+        .live-counter-box {
+            grid-column: 1 / -1;
+            background: rgba(230, 57, 70, 0.05);
+            border: 1px dashed rgba(230, 57, 70, 0.3);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .live-counter-box h4 {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 5px;
+        }
+
+        .live-total {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--gold);
+        }
+
+        .submit-booking-btn {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, var(--crimson), #b31924);
+            color: white;
+            border: none;
+            padding: 16px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 14px;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 5px 20px rgba(230, 57, 70, 0.3);
+        }
+
+        .submit-booking-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(230, 57, 70, 0.5);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background: #040507;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            header { padding: 15px 25px; width: 95%; }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2.8rem; }
+            .booking-container { padding: 25px; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(15px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header id="navbar">
+        <a href="#" class="logo">THE DUCK <span>HOUSE</span></a>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#menu">Menu Platters</a></li>
+            <li><a href="#book-feast">Book A Feast</a></li>
+        </ul>
+        <a href="#book-feast" class="cta-btn">Book Catering</a>
+    </header>
+
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <h1>The Ultimate <span>Peking Duck</span> Experience</h1>
+            <p>An upscale Chinese cloud kitchen delivering curated signature platters, crispy artisanal roasts, and premium hot pots across Nairobi.</p>
+            <a href="#menu" class="cta-btn" style="padding: 16px 36px; font-size: 1.1rem;">View Expanded Menu</a>
+        </div>
+    </section>
+
+    <section class="section" id="menu">
+        <div class="section-header">
+            <h2>Our Signature Experiences</h2>
+            <p>Hand-crafted platters combining classic culinary heritage with dynamic flavor profiles.</p>
+        </div>
+
+        <div class="grid">
+            <div class="card">
+                <span class="card-tag">Signature Deal</span>
+                <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=600&q=80" alt="Peking Duck" class="card-img">
+                <div class="card-body">
+                    <div>
+                        <h3>One Full Peking Duck Bundle</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> 1 Full Crispy Peking Duck</li>
+                            <li><i class="fas fa-check"></i> Soft Homemade Pancakes</li>
+                            <li><i class="fas fa-check"></i> Sliced Fresh Cucumbers &amp; Spring Onions</li>
+                            <li><i class="fas fa-check"></i> Signature Duck Sauce &amp; Chili Oil</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price">KES 5,000</div>
+                        <button class="book-now-btn" onclick="selectPackage('duck-bundle')">Select</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="card-tag">Most Popular</span>
+                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Chinese Banquet Platter" class="card-img">
+                <div class="card-body">
+                    <div>
+                        <h3>The Signature Mega Platter</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Half Peking Duck &amp; Steamed Chicken</li>
+                            <li><i class="fas fa-check"></i> Ginger Scallion Crab</li>
+                            <li><i class="fas fa-check"></i> Mapo Tofu Veg &amp; Egg Fried Rice</li>
+                            <li><i class="fas fa-check"></i> Bang Bang Noodle &amp; Crispy Kimchi</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price">KES 10,500</div>
+                        <button class="book-now-btn" onclick="selectPackage('mega-platter')">Select</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1547928576-a4a3323dce9d?auto=format&fit=crop&w=600&q=80" alt="Chinese Hotpot" class="card-img">
+                <div class="card-body">
+                    <div>
+                        <h3>The Festive Luxury Menu</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Lotus Salad &amp; Crispy Tofu</li>
+                            <li><i class="fas fa-check"></i> Authentic Sichuan Duck Hotpot Base</li>
+                            <li><i class="fas fa-check"></i> 1 Full Char Siu Chicken &amp; Steamed Fish</li>
+                            <li><i class="fas fa-check"></i> 1 Complimentary Bottle of Selected Wine</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price">KES 12,800</div>
+                        <button class="book-now-btn" onclick="selectPackage('festive-luxury')">Select</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="https://images.unsplash.com/photo-1559742811-824289528580?auto=format&fit=crop&w=600&q=80" alt="Griddle Prawns" class="card-img">
+                <div class="card-body">
+                    <div>
+                        <h3>The Griddle Prawn Platter</h3>
+                        <ul>
+                            <li><i class="fas fa-check"></i> Jumbo Spicy Szechuan Griddle Prawns</li>
+                            <li><i class="fas fa-check"></i> Crispy lotus roots &amp; fried vegetables</li>
+                            <li><i class="fas fa-check"></i> Scallion Jasmine Rice</li>
+                        </ul>
+                    </div>
+                    <div class="card-footer">
+                        <div class="price">KES 6,500</div>
+                        <button class="book-now-btn" onclick="selectPackage('prawn-platter')">Select</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="book-feast" style="background: #0a0e15;">
+        <div class="section-header">
+            <h2>Book Your Private Feast</h2>
+            <p>Customize your catering plan. Our real-time engine handles instantly calculations.</p>
+        </div>
+
+        <div class="booking-container">
+            <form class="booking-form" id="feastForm" onsubmit="handleFormSubmit(event)">
+                <div class="form-group">
+                    <label for="package">Choose Platter Base</label>
+                    <select id="package" onchange="calculatePrice()">
+                        <option value="5000">One Full Peking Duck Bundle — KES 5,000</option>
+                        <option value="10500" selected>The Signature Mega Platter — KES 10,500</option>
+                        <option value="12800">The Festive Luxury Menu — KES 12,800</option>
+                        <option value="6500">The Griddle Prawn Platter — KES 6,500</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="quantity">Number of Platters</label>
+                    <input type="number" id="quantity" min="1" value="1" oninput="calculatePrice()">
+                </div>
+
+                <div class="form-group">
+                    <label for="addons">Add Premium Extras</label>
+                    <select id="addons" onchange="calculatePrice()">
+                        <option value="0">No Addons Selected</option>
+                        <option value="1800">Extra Steamed Chicken (+ KES 1,800)</option>
+                        <option value="2500">Extra Half Peking Duck (+ KES 2,500)</option>
+                        <option value="1500">Premium House Chili Oil Pack (+ KES 1,500)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="delivery">Delivery Location (Nairobi)</label>
+                    <input type="text" id="delivery" placeholder="e.g. Kilimani, Runda, Karen" required>
+                </div>
+
+                <div class="live-counter-box">
+                    <h4>Estimated Total Price</h4>
+                    <div class="live-total" id="totalPriceDisplay">KES 10,500</div>
+                </div>
+
+                <button type="submit" class="submit-booking-btn">Secure Order via WhatsApp</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 The Duck House Nairobi. All Culinary Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // Smooth Nav-bar transition trigger
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // Interactive dynamic price calculator
+        function calculatePrice() {
+            const packagePrice = parseInt(document.getElementById('package').value);
+            const quantity = parseInt(document.getElementById('quantity').value) || 1;
+            const addonPrice = parseInt(document.getElementById('addons').value);
+            
+            const finalTotal = (packagePrice * quantity) + addonPrice;
+            
+            document.getElementById('totalPriceDisplay').innerText = "KES " + finalTotal.toLocaleString();
+        }
+
+        // Connect Menu Platter cards with the interactive booking desk
+        function selectPackage(packageName) {
+            const packageSelect = document.getElementById('package');
+            
+            if (packageName === 'duck-bundle') packageSelect.value = "5000";
+            else if (packageName === 'mega-platter') packageSelect.value = "10500";
+            else if (packageName === 'festive-luxury') packageSelect.value = "12800";
+            else if (packageName === 'prawn-platter') packageSelect.value = "6500";
+            
+            calculatePrice();
             document.getElementById('book-feast').scrollIntoView({ behavior: 'smooth' });
         }
 
-        function submitBooking(event) {
-            event.preventDefault();
-
-            const guests = document.getElementById('guest-count').value;
-            const menu = document.getElementById('menu-selection').options[document.getElementById('menu-selection').selectedIndex].text;
-            const service = document.getElementById('service-type').options[document.getElementById('service-type').selectedIndex].text;
-            const date = document.getElementById('event-date').value;
-            const total = document.getElementById('total-price').textContent;
-
-            const message = `Hi Duck House! I'd like to book catering for my event.
-- Guests: ${guests}
-- Menu: ${menu}
-- Service: ${service}
-- Event Date: ${date}
-- Estimated Total: ${total}
-Please confirm availability and send details!`;
-
-            const whatsappUrl = 'https://wa.me/254740401110?text=' + encodeURIComponent(message);
-            window.open(whatsappUrl, '_blank');
+        // WhatsApp Checkout routing
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const selectedMenu = document.getElementById('package').options[document.getElementById('package').selectedIndex].text;
+            const qty = document.getElementById('quantity').value;
+            const location = document.getElementById('delivery').value;
+            const total = document.getElementById('totalPriceDisplay').innerText;
+            
+            const message = encodeURIComponent(`Hello The Duck House! I'd like to place an order:\n\nPlatter: ${selectedMenu}\nQuantity: ${qty}\nLocation: ${location}\nTotal Estimated: ${total}`);
+            window.open(`https://wa.me/254740401110?text=${message}`, '_blank');
         }
-
-        // Initialize calculator on page load
-        calculateTotal();
     </script>
 </body>
 </html>

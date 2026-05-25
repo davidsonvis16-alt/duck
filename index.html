@@ -1121,7 +1121,7 @@
             const total = document.getElementById('totalPriceDisplay').innerText;
             
             const message = encodeURIComponent(`Hello The Duck House! I'd like to place an order:\n\nPlatter: ${selectedMenu}\nQuantity: ${qty}\nLocation: ${location}\nTotal Estimated: ${total}`);
-            window.open(`https://wa.me/254740401110?text=${message}`, '_blank');
+            window.open(`https://wa.me/?text=${message}`, '_blank');
         }
     </script>
 </body>

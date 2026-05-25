@@ -429,6 +429,7 @@
         <div class="grid">
             <div class="card">
                 <span class="card-tag">Most Popular</span>
+                <img src="https://images.unsplash.com/photo-1563245372-f21724e3856d?auto=format&fit=crop&w=600&q=80" alt="Signature Mega Platter" style="width:100%; height:200px; object-fit:cover; border-radius:20px 20px 0 0; margin:-30px -30px 20px -30px;">
                 <div>
                     <h3>The Signature Mega Platter</h3>
                     <ul>
@@ -447,6 +448,7 @@
 
             <div class="card">
                 <span class="card-tag" style="background:#e63946; color:#fff;">Limited Deal</span>
+                <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e?auto=format&fit=crop&w=600&q=80" alt="Peking Duck Bundle" style="width:100%; height:200px; object-fit:cover; border-radius:20px 20px 0 0; margin:-30px -30px 20px -30px;">
                 <div>
                     <h3>One Full Peking Duck Bundle</h3>
                     <ul>
@@ -463,6 +465,7 @@
             </div>
 
             <div class="card">
+                <img src="https://images.unsplash.com/photo-1547928576-a4a3323dce9d?auto=format&fit=crop&w=600&q=80" alt="Festive Luxury Menu" style="width:100%; height:200px; object-fit:cover; border-radius:20px 20px 0 0; margin:-30px -30px 20px -30px;">
                 <div>
                     <h3>The Festive Luxury Menu</h3>
                     <ul>
@@ -1078,6 +1081,11 @@
     </footer>
 
     <script>
+        // Initialize calculator when DOM is ready
+        window.addEventListener('load', function() {
+            calculatePrice();
+        });
+
         // Smooth Nav-bar transition trigger
         const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
@@ -1090,13 +1098,20 @@
 
         // Interactive dynamic price calculator
         function calculatePrice() {
-            const packagePrice = parseInt(document.getElementById('package').value);
-            const quantity = parseInt(document.getElementById('quantity').value) || 1;
-            const addonPrice = parseInt(document.getElementById('addons').value);
+            const packageSelect = document.getElementById('package');
+            const quantityInput = document.getElementById('quantity');
+            const addonsSelect = document.getElementById('addons');
+            const totalDisplay = document.getElementById('totalPriceDisplay');
             
-            const finalTotal = (packagePrice * quantity) + addonPrice;
-            
-            document.getElementById('totalPriceDisplay').innerText = "KES " + finalTotal.toLocaleString();
+            if (packageSelect && quantityInput && addonsSelect && totalDisplay) {
+                const basePrice = parseFloat(packageSelect.value) || 0;
+                const quantity = parseFloat(quantityInput.value) || 1;
+                const addonPrice = parseFloat(addonsSelect.value) || 0;
+                
+                const total = (basePrice * quantity) + addonPrice;
+                
+                totalDisplay.textContent = 'KES ' + total.toLocaleString('en-US', {maximumFractionDigits: 0});
+            }
         }
 
         // Connect Menu Platter cards with the interactive booking desk
@@ -1121,7 +1136,7 @@
             const total = document.getElementById('totalPriceDisplay').innerText;
             
             const message = encodeURIComponent(`Hello The Duck House! I'd like to place an order:\n\nPlatter: ${selectedMenu}\nQuantity: ${qty}\nLocation: ${location}\nTotal Estimated: ${total}`);
-            window.open(`https://wa.me/?text=${message}`, '_blank');
+            window.open(`https://wa.me/254740401110?text=${message}`, '_blank');
         }
     </script>
 </body>
